@@ -8,6 +8,8 @@ const minimatch = require('minimatch')
 const traverse = require('traverse')
 const jsonFormat = require('json-format')
 
+const formatConfig = { type: 'space', size: 2 }
+
 const match = (path, dstGlob) =>
   minimatch(path.join('/'), dstGlob, { dot: true })
 
@@ -25,7 +27,7 @@ const setValue = (dstGlob, value) => (files) =>
             }
           })
         )
-        .then((json) => writeFile(dst, jsonFormat(json)))
+        .then((json) => writeFile(dst, jsonFormat(json, formatConfig)))
     )
   )
 
@@ -49,7 +51,7 @@ const assign = (map) => (dstGlob, srcKey) => (files) =>
               : oldValue
           })
         })
-        .then((json) => writeFile(dst, jsonFormat(json)))
+        .then((json) => writeFile(dst, jsonFormat(json, formatConfig)))
     )
   )
 
