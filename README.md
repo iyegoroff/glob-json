@@ -15,7 +15,7 @@ npm i glob-json
 
 ## Description
 
-Utility to modify JSON files with globbing patterns. It uses 'glob' and 'minimatch' in 'dot:true' mode.Since the '/' character is used as a path separator for keys, this tool has some limitations. For example, 'x/\*/z' key pattern will match '{&nbsp;x:&nbsp;{&nbsp;y:&nbsp;{&nbsp;z:&nbsp;1&nbsp;}&nbsp;}&nbsp;}', but not '{&nbsp;x:&nbsp;{&nbsp;"y/w":&nbsp;{&nbsp;z:&nbsp;1&nbsp;}}}'.
+Utility to modify JSON files with globbing patterns. It uses 'glob' and 'minimatch' in 'dot:true' mode. Since the '/' character is used as a path separator for keys, this tool has some limitations. For example, 'x/\*/z' key pattern will match '{&nbsp;x:&nbsp;{&nbsp;y:&nbsp;{&nbsp;z:&nbsp;1&nbsp;}&nbsp;}&nbsp;}', but not '{&nbsp;x:&nbsp;{&nbsp;"y/w":&nbsp;{&nbsp;z:&nbsp;1&nbsp;}}}'.
 
 Usage:
 
