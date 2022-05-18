@@ -1,0 +1,25 @@
+{
+  "name": "glob-json",
+  "version": "0.0.0",
+  "description": "Edit JSON files from CLI",
+  "bin": "bin/index.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json",
+    "glob",
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^8.0.3",
+    "minimatch": "^5.1.0",
+    "traverse": "^0.6.6"
+  },
+  "devDependencies": {
+    "tap": "^16.2.0"
+  }
+}
