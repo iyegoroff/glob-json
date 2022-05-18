@@ -23,8 +23,8 @@ Usage:
 
 Options:
 
-dstPathGlob - a glob pattern to select destination files
-srcPath - path to a source file, if not specified each destination file will be its own source
+    dstPathGlob - a glob pattern to select destination files
+    srcPath - path to a source file, if not specified each destination file will be its own source
 
 Commands:
 
