@@ -1,21 +1,36 @@
 {
   "name": "glob-json",
   "version": "0.0.0",
-  "description": "Edit JSON files from CLI",
+  "description": "Edit JSON files from CLI with globbing patterns",
   "bin": "bin/index.js",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postversion": "git push && git push --tags",
+    "test": "tap --100",
+    "posttest": "rm -rf coverage && mkdir coverage && tap --coverage-report=text-lcov >> coverage/lcov.info"
   },
   "keywords": [
     "json",
     "glob",
     "cli"
   ],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "bugs": {
+    "url": "https://github.com/iyegoroff/glob-json/issues"
+  },
+  "homepage": "https://github.com/iyegoroff/glob-json#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyegoroff/glob-json.git"
+  },
+  "author": "iyegoroff <iegoroff@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "glob": "^8.0.3",
+    "json-format": "^1.0.1",
     "minimatch": "^5.1.0",
     "traverse": "^0.6.6"
   },
