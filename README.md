@@ -13,23 +13,22 @@
 npm i glob-json
 ```
 
-## Usage
+## Description
 
-```
-Utility to modify JSON files with globbing patterns. It uses 'glob' and 'minimatch' in 'dot:true' mode.Since the '/' character is used as a path separator for keys, this tool has some limitations. For example, 'x/*/z' key pattern will match '{ x: { y: { z: 1 } } }', but not '{ x: { "y/w": { z: 1 }}}'.
+Utility to modify JSON files with globbing patterns. It uses 'glob' and 'minimatch' in 'dot:true' mode.Since the '/' character is used as a path separator for keys, this tool has some limitations. For example, 'x/\*/z' key pattern will match '{&nbsp;x:&nbsp;{&nbsp;y:&nbsp;{&nbsp;z:&nbsp;1&nbsp;}&nbsp;}&nbsp;}', but not '{&nbsp;x:&nbsp;{&nbsp;"y/w":&nbsp;{&nbsp;z:&nbsp;1&nbsp;}}}'.
 
 Usage:
 
-  glob-json <dstPathGlob> [srcPath] <set|del|merge> <dstKeyGlob> [--key|--number|--string|--true|--false|--null|srcKey] [value]
+`glob-json <dstPathGlob> [srcPath] <set|del|merge> <dstKeyGlob> [--key|--number|--string|--true|--false|--null|srcKey] [value]`
 
 Options:
 
-  dstPathGlob - a glob pattern to select destination files
-  srcPath     - path to a source file, if not specified each destination file will be its own source
+dstPathGlob - a glob pattern to select destination files
+srcPath - path to a source file, if not specified each destination file will be its own source
 
 Commands:
 
-  set <dstKeyGlob> [--string|--number|--true|--false|--null|--key] [value]
+`set <dstKeyGlob> [--string|--number|--true|--false|--null|--key] [value]`
 
     Changes properties in destination files
 
@@ -49,7 +48,7 @@ Commands:
       glob-json 'fixtures/**/*.json' set version --number 5
       glob-json package.json my-lib.json set 'dependencies/my-lib' --key version
 
-  del <dstKeyGlob>
+`del <dstKeyGlob>`
 
     Deletes properties from destination files
 
@@ -61,7 +60,7 @@ Commands:
 
       glob-json temp.json del 'some/**/deeply/*/nested/key'
 
-  merge <dstKeyGlob> <srcKey>
+`merge <dstKeyGlob> <srcKey>`
 
     Merges property from source file into destination files
 
@@ -73,4 +72,3 @@ Commands:
     Examples:
 
       glob-json 'packages/*/package.json' merge '' publishConfig
-```
